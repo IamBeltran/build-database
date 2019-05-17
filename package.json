@@ -1,0 +1,62 @@
+{
+  "name": "build-database",
+  "version": "0.0.1",
+  "description": "Learn, Build, & Test; Repository that contains a project for tests, development, build, and deploy, of databases in MongoDB",
+  "keywords": [
+    "Build",
+    "Database",
+    "Deploy",
+    "Development",
+    "Javascript",
+    "Learn",
+    "MongoDB",
+    "Mongoose",
+    "Test"
+  ],
+  "homepage": "https://github.com/IamBeltran/build-database#readme",
+  "bugs": {
+    "url": "https://github.com/IamBeltran/build-database/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IamBeltran/build-database.git"
+  },
+  "license": "MIT",
+  "author": "Victor Giovanni Beltrán Rodríguez <beltran-victor@outlook.com> (https://vgbr-dev.blogspot.com)",
+  "contributors": [
+    {
+      "name": "Victor Giovanni Beltrán Rodriguez",
+      "email": "beltran-victor@outlook.com"
+    }
+  ],
+  "maintainers": [
+    {
+      "name": "Victor Giovanni Beltrán Rodriguez",
+      "email": "beltran-victor@outlook.com"
+    }
+  ],
+  "main": "./src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "engines": {},
+  "engineStrict": false,
+  "os": [
+    "darwin",
+    "linux",
+    "win32"
+  ],
+  "cpu": [],
+  "preferGlobal": true,
+  "analyze": true,
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "chalk": "^2.4.2",
+    "cross-env": "^5.2.0",
+    "moment": "^2.24.0",
+    "moment-timezone": "^0.5.25",
+    "mongonaut": "^3.0.0",
+    "mongoose": "^5.5.8",
+    "mongoose-unique-validator": "^2.0.3"
+  }
+}
