@@ -38,6 +38,7 @@
   "main": "./src/index.js",
   "scripts": {
     "precommit": "lint-staged",
+    "eslint:src": "cross-env NODE_ENV=test gulp eslint:src",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "engines": {},
@@ -67,6 +68,7 @@
     "eslint-config-airbnb": "^17.1.0",
     "eslint-config-airbnb-base": "^13.1.0",
     "eslint-config-prettier": "^4.3.0",
+    "eslint-formatter-pretty": "^2.1.1",
     "eslint-plugin-import": "^2.17.2",
     "eslint-plugin-jsx-a11y": "^6.2.1",
     "eslint-plugin-prettier": "^3.1.0",
