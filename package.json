@@ -39,6 +39,7 @@
   "scripts": {
     "precommit": "lint-staged",
     "eslint:src": "cross-env NODE_ENV=test gulp eslint:src",
+    "quick:test": "cross-env NODE_ENV=test nodemon ./quick.test.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "engines": {},
