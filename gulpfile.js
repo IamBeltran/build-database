@@ -40,11 +40,24 @@ function loadTask(fileName, taskName) {
 //  │ SET GULP-TASKS                                                                    │
 //  └───────────────────────────────────────────────────────────────────────────────────┘
 
-// ▶ DEFAULT GULP-TASK
-// gulp.task('default', loadTask('default'));
+//  ──[ DEFAULT TASKS ]──────────────────────────────────────────────────────────────────
+gulp.task('default', loadTask('default'));
+
+//  ──[ ESLINT TASKS ]───────────────────────────────────────────────────────────────────
+
+// ▶ TASK: eslint:src
+gulp.task('eslint:src', loadTask('eslint', 'src'));
+
+// ▶ TASK: quick:eslint
+gulp.task('quick:eslint', loadTask('eslint', 'quick'));
+
+// ▶ TASK: eslint:watch
+gulp.task('eslint:watch', loadTask('eslint', 'watch'));
+
+// ▶ TASK: eslint:fix
+gulp.task('eslint:fix', loadTask('eslint', 'fix'));
+
+//  ──[ UNIT-TEST TASKS ]────────────────────────────────────────────────────────────────
 
 // ▶ TASK FOR TEST WITH MOCHA
-gulp.task('eslint:custom', loadTask('eslint', 'customFormatter'));
-
-// ▶ TASK FOR TEST WITH MOCHA
-gulp.task('test:simple', loadTask('mocha', 'simple'));
+// gulp.task('test:simple', loadTask('mocha', 'simple'));
