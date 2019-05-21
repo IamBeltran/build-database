@@ -71,6 +71,9 @@ typings/
 # Notes directorie
 notes/
 
+# fixtures directorie
+test/fixtures/
+
 # Matches the files with patron quick.<name>.ext
 quick.*
 
@@ -79,6 +82,9 @@ develop.*
 
 # Matches the files with patron debug.<name>.ext
 debug.*
+
+# Matches the files with patron build.<name>.ext
+build.*
 
 # Matches the files with patron test.<name>.js
 test.*.js
