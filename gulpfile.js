@@ -3,6 +3,7 @@
 //  │ REQUIRE THIRDPARTY-MODULES DEPENDENCY.                                            │
 //  └───────────────────────────────────────────────────────────────────────────────────┘
 const gulp = require('gulp');
+const cache = require('gulp-cached');
 
 //  ┌───────────────────────────────────────────────────────────────────────────────────┐
 //  │ REQUIRE NODEJS-MODULE DEPENDENCIES.                                               │
@@ -41,23 +42,43 @@ function loadTask(fileName, taskName) {
 //  └───────────────────────────────────────────────────────────────────────────────────┘
 
 //  ──[ DEFAULT TASKS ]──────────────────────────────────────────────────────────────────
+
+// ▶ TASK: gulp default
 gulp.task('default', loadTask('default'));
 
 //  ──[ ESLINT TASKS ]───────────────────────────────────────────────────────────────────
 
-// ▶ TASK: eslint:src
+// ▶ TASK: gulp eslint:src
 gulp.task('eslint:src', loadTask('eslint', 'src'));
 
-// ▶ TASK: quick:eslint
+// ▶ TASK: gulp quick:eslint
 gulp.task('quick:eslint', loadTask('eslint', 'quick'));
 
-// ▶ TASK: eslint:watch
-gulp.task('eslint:watch', loadTask('eslint', 'watch'));
-
-// ▶ TASK: eslint:fix
+// ▶ TASK: gulp eslint:fix
 gulp.task('eslint:fix', loadTask('eslint', 'fix'));
+
+// ▶ TASK: gulp eslint:fail
+gulp.task('eslint:fail', loadTask('eslint', 'fail'));
+
+// ▶ TASK: gulp eslint:file --file ./src/index.js --fix
+gulp.task('eslint:file', loadTask('eslint', 'file'));
+
+// ▶ TASK: gulp watch
+gulp.task('watch', loadTask('eslint', 'watch'));
+
+// ▶ TASK: gulp eslint:watch
+gulp.task('eslint:watch', () => {
+  return gulp.watch(['src/**/*.js'], { ignoreInitial: false }, gulp.series('watch'), event => {
+    if (event.type === 'deleted' && cache.caches.eslint) {
+      delete cache.caches.eslint[event.path]; // remove deleted files from cache
+    }
+  });
+});
+
+// ▶ TASK: gulp eslint:report
+gulp.task('eslint:report', loadTask('eslint', 'report'));
 
 //  ──[ UNIT-TEST TASKS ]────────────────────────────────────────────────────────────────
 
-// ▶ TASK FOR TEST WITH MOCHA
+// ▶ TASK: gulp mocha:specs
 // gulp.task('test:simple', loadTask('mocha', 'simple'));
