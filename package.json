@@ -82,6 +82,7 @@
     "gulp-eslint": "^5.0.0",
     "gulp-if": "^2.0.2",
     "gulp-mocha": "^6.0.0",
+    "gulp-plumber": "^1.2.1",
     "gulp-rename": "^1.4.0",
     "husky": "^2.3.0",
     "lint-staged": "^8.1.7",
