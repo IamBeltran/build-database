@@ -33,10 +33,6 @@ const appDirectory = fs.realpathSync(process.cwd());
 //  │ DECLARATION OF AUXILIARY FUNCTIONS.                                               │
 //  └───────────────────────────────────────────────────────────────────────────────────┘
 
-// function embolden(text) {
-//   return `\u001b[1m${text}\u001b[22m `;
-// }
-
 function pluralish(count, text) {
   return `${count} ${text}${count === 1 ? '' : 's'}`;
 }
