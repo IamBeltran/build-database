@@ -5,7 +5,8 @@
     "**/.hg": true,
     "**/CVS": true,
     "**/.DS_Store": true,
-    /**/
+    /**
+    */
     ".editorconfig": true,
     ".eslintrc": true,
     ".eslintignore": true,
@@ -18,8 +19,10 @@
     "LICENSE": true,
     "COMMIT_EDITMSG": true,
     "README.md": false,
+    "gulpfile.js": false,
     "package-lock.json": true,
     "node_modules":true,
+    /**/
   },
   "search.exclude": {
     "**/node_modules": true,
