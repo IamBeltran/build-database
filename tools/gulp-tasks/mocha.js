@@ -49,7 +49,16 @@ module.exports = {
   report: gulp => () => {
     return gulp
       .src(['!node_modules/**', 'test/specs/spec.*.js'])
-      .pipe(mocha({ reporter: 'markdown', reporterOptions: { reportFilename: './index.md' } }))
+      .pipe(
+        mocha({
+          reporter: 'mochawesome',
+          reporterOptions: {
+            reportDir: './reports/mocha/mochawesome/',
+            reportFilename: 'report',
+            quiet: true,
+          },
+        }),
+      )
       .on('error', error => {
         log(`Error on test`);
         log(`Message: ${red(`${error.message}`)}`);
