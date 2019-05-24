@@ -71,23 +71,26 @@ typings/
 # Notes directorie
 notes/
 
-# fix directorie
-scripts/fix/
-
-# fix directorie
+# scripts/build/ directorie
 scripts/build/
+
+# scripts/debug/ directorie
+scripts/debug/
+
+# scripts/fix/ directorie
+scripts/fix/
 
 # Matches the files with patron quick.<name>.ext
 quick.*
 
 # Matches the files with patron develop.<name>.ext
-develop.*
+develop.*.js
 
 # Matches the files with patron debug.<name>.ext
-debug.*
+debug.*.js
 
 # Matches the files with patron build.<name>.ext
-build.*
+build.*.js
 
 # Matches the files with patron test.<name>.js
 test.*.js
