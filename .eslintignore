@@ -18,3 +18,5 @@ dist/
 notes/
 quick.*
 test.*.js
+
+reports/
