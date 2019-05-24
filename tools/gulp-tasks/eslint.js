@@ -105,7 +105,7 @@ module.exports = {
       .pipe(eslint.format('pretty')) // if fixed, write the file to dest
       .pipe(eslint.result(result => logIsFixed(result)))
       .pipe(rename({ prefix: 'fix.', extname: '.js' }))
-      .pipe(gulpIf(isFixed, dest('test/fixtures/')));
+      .pipe(gulpIf(isFixed, dest('scripts/fix/')));
   },
   fail: gulp => () => {
     return gulp
