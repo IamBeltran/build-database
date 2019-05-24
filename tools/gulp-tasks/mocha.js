@@ -56,4 +56,3 @@ module.exports = {
       });
   },
 };
-// {reportFilename: 'index.html'}
