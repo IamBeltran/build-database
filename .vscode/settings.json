@@ -19,7 +19,7 @@
     "LICENSE": true,
     "COMMIT_EDITMSG": true,
     "README.md": false,
-    "gulpfile.js": false,
+    "gulpfile.js": true,
     "package-lock.json": true,
     "node_modules":true,
     /**/
