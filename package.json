@@ -58,7 +58,7 @@
     "bcryptjs": "^2.4.3",
     "chalk": "^2.4.2",
     "cross-env": "^5.2.0",
-    "moment": "^2.24.0",
+    "moment": "^2.29.4",
     "moment-timezone": "^0.5.25",
     "mongonaut": "^3.0.0",
     "mongoose": "^5.5.8",
